@@ -10,16 +10,12 @@
     "packages/*"
   ],
   "scripts": {
-    "native": "npm run start --workspace=mobile-app",
-    "native:android": "npm run android --workspace=mobile-app",
-    "native:ios": "npm run ios --workspace=mobile-app",
-    "web:dev": "npm run dev --workspace=web-app",
-    "web:storybook": "npm run storybook --workspace=web-app",
-    "validate": "npm run check-types --workspaces && npm run check-format --workspaces && npm run lint --workspaces",
+    "native": "yarn workspace mobile-app start",
+    "native:android": "yarn workspace mobile-app android",
+    "native:ios": "yarn workspace mobile-app ios",
+    "web:dev": "yarn workspace web-app dev",
+    "web:storybook": "yarn workspace web-app storybook",
+    "validate": "yarn workspaces run check-types && yarn workspaces run check-format && yarn workspaces run lint",
     "prepare": "husky install"
-  },
-  "engines": {
-    "npm": "~7.19.1",
-    "node": "~14.17.2"
   }
 }
