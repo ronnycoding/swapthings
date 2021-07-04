@@ -17,5 +17,8 @@
     "web:storybook": "yarn workspace web-app storybook",
     "validate": "yarn workspaces run check-types && yarn workspaces run check-format && yarn workspaces run lint",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "yarn-workspaces": "^0.1.0"
   }
 }
