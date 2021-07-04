@@ -1,10 +1,13 @@
 {
   "name": "codebase-fullstack-startup-apps",
   "private": true,
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0"
   },
   "workspaces": [
     "packages/*"
@@ -14,11 +17,24 @@
     "native:android": "yarn workspace mobile-app android",
     "native:ios": "yarn workspace mobile-app ios",
     "web:dev": "yarn workspace web-app dev",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "diff": "lerna diff",
     "web:storybook": "yarn workspace web-app storybook",
-    "validate": "yarn workspaces run check-types && yarn workspaces run check-format && yarn workspaces run lint",
+    "check-types": "lerna run check-types --stream",
+    "check-format": "lerna run check-format --stream",
+    "lint": "lerna run lint --stream",
+    "validate": "yarn check-types && yarn check-format && yarn lint",
     "prepare": "husky install"
   },
   "dependencies": {
     "yarn-workspaces": "^0.1.0"
+  },
+  "lint-staged": {
+    "*.{js|json|ts|tsx}": [
+      "check-types",
+      "check-format",
+      "lint",
+      "git add ."
+    ]
   }
 }
