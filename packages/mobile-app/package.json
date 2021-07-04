@@ -1,0 +1,76 @@
+{
+  "name": "mobile-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "storybook:android": "STORY_BOOK=true expo start --android",
+    "ios": "expo start --ios",
+    "storybook:ios": "STORY_BOOK=true expo start --ios",
+    "eject": "expo eject",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook",
+    "lint": "eslint --ignore-path .gitignore .",
+    "check-format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\" --list-different",
+    "check-types": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "npm run check-types && npm run check-format && npm run lint"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "12.0.0",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/bottom-tabs": "5.11.2",
+    "@react-navigation/native": "~5.8.10",
+    "@react-navigation/stack": "~5.12.8",
+    "expo": "~42.0.0",
+    "expo-asset": "~8.3.2",
+    "expo-constants": "~11.0.1",
+    "expo-font": "~9.2.1",
+    "expo-linking": "~2.3.1",
+    "expo-splash-screen": "~0.11.2",
+    "expo-status-bar": "~1.0.4",
+    "expo-web-browser": "~9.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "~3.4.0",
+    "react-native-web": "~0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/runtime": "7.14.6",
+    "@blockmatic/eslint-config": "2.0.0",
+    "@blockmatic/prettier-config": "^2.0.0",
+    "@storybook/addon-actions": "5.3.21",
+    "@storybook/addon-knobs": "5.3.21",
+    "@storybook/addon-links": "5.3.21",
+    "@storybook/addon-ondevice-actions": "5.3.23",
+    "@storybook/addon-ondevice-knobs": "5.3.25",
+    "@storybook/react-native": "5.3.25",
+    "@storybook/react-native-server": "5.3.23",
+    "@types/react": "~16.9.35",
+    "@types/react-native": "~0.63.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "babel-loader": "8.2.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest-expo": "~41.0.0-beta.0",
+    "prettier": "^2.2.1",
+    "typescript": "~4.0.0"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/__mocks__/globalMock.js"
+    ]
+  }
+}

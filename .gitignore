@@ -1,0 +1,4 @@
+node_modules
+# Errors
+*error.log
+.vscode/
