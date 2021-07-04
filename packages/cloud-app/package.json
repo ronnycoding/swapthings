@@ -14,11 +14,17 @@
     "check-format": "prettier --ignore-path .gitignore --write \"**/*.+(json|ts)\" --list-different",
     "check-types": "tsc"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
+  },
   "devDependencies": {
     "@aws-cdk/assert": "1.111.0",
     "@blockmatic/eslint-config": "2.0.0",
     "@blockmatic/prettier-config": "2.0.0",
-    "@types/jest": "26.0.10",
+    "@types/jest": "^26.0.23",
     "@types/node": "10.17.27",
     "@typescript-eslint/eslint-plugin": "4.28.1",
     "@typescript-eslint/parser": "4.28.1",

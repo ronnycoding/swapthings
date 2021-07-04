@@ -1,3 +1,8 @@
 {
-  "extends": ["@blockmatic", "prettier"]
+  "extends": ["@blockmatic", "prettier"],
+  "globals": {
+    "test": true,
+    "it": true,
+    "expect": true
+  }
 }
