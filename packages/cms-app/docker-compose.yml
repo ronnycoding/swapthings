@@ -1,0 +1,51 @@
+version: "3.1"
+
+services:
+  strapi:
+    image: strapi/strapi
+    volumes:
+      - .:/srv/app
+      - /srv/app/node_modules
+    ports:
+      - 1337:1337
+    environment:
+      DATABASE_CLIENT: mongo
+      DATABASE_HOST: ${MONGO_HOST}
+      DATABASE_PORT: ${MONGO_PORT}
+      DATABASE_USERNAME: ${MONGO_ROOT_USERNAME}
+      DATABASE_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      DATABASE_NAME: ${MONGO_DATABASE}
+      MAIL_FROM: ${MAIL_FROM}
+      MAIL_REPLY_TO: ${MAIL_REPLY_TO}
+      MAIL_TEST_TO: ${MAIL_TEST_TO}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      CLOUDINARY_NAME: ${CLOUDINARY_NAME}
+      CLOUDINARY_KEY: ${CLOUDINARY_KEY}
+      CLOUDINARY_SECRET: ${CLOUDINARY_SECRET}
+  mongo-cms:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+      MONGO_INITDB_USER_PASSWORD: ${MONGO_USER_PASSWORD}
+      MONGO_INITDB_USER_NAME: ${MONGO_USER_NAME}
+    volumes:
+      - db-cms:/etc/mongo
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_ROOT_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_ROOT_PASSWORD}
+      ME_CONFIG_MONGODB_SERVER: ${MONGO_HOST}
+      ME_CONFIG_MONGODB_DATABASE: ${MONGO_DATABASE}
+
+volumes:
+  db-cms: {}
