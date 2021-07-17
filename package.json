@@ -19,6 +19,7 @@
     "web:dev": "yarn workspace web-app dev",
     "cms:dev": "yarn workspace cms-app dev",
     "cms:build": "yarn workspace cms-app build",
+    "cms:cli": "yarn workspace cms-app strapi",
     "cms:docker-up": "yarn workspace cms-app docker-up",
     "cms:docker-stop": "yarn workspace cms-app docker-stop",
     "cms:docker-down": "yarn workspace cms-app docker-down",
