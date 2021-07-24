@@ -10,11 +10,11 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
   graphql-engine:
-    image: hasura/graphql-engine:v2.0.3
+    image: hasura/graphql-engine:latest
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
-      - "postgres"
+      - postgres
     restart: always
     environment:
       HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:5432/${POSTGRES_DB}
