@@ -1,0 +1,15 @@
+table:
+  name: article_sub_categories
+  schema: public
+object_relationships:
+- name: article_category
+  using:
+    foreign_key_constraint_on: articleCategoryParent
+array_relationships:
+- name: articles
+  using:
+    foreign_key_constraint_on:
+      column: articleSubCategoryId
+      table:
+        name: articles
+        schema: public

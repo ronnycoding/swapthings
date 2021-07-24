@@ -29,6 +29,7 @@
     "hasura:docker-down": "yarn workspace hasura-app docker-down",
     "hasura:docker-restart": "yarn workspace hasura-app docker-restart",
     "hasura:cli": "yarn workspace hasura-app cli",
+    "hasura:open-console": "yarn workspace hasura-app cli console --endpoint http://localhost:8080",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "diff": "lerna diff",
     "web:storybook": "yarn workspace web-app storybook",

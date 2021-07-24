@@ -1,0 +1,7 @@
+table:
+  name: towns
+  schema: public
+object_relationships:
+- name: province
+  using:
+    foreign_key_constraint_on: provinceISO

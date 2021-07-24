@@ -1,0 +1,22 @@
+table:
+  name: users
+  schema: public
+object_relationships:
+- name: user_role
+  using:
+    foreign_key_constraint_on: userRoleId
+array_relationships:
+- name: articles
+  using:
+    foreign_key_constraint_on:
+      column: publisherId
+      table:
+        name: articles
+        schema: public
+- name: submissions
+  using:
+    foreign_key_constraint_on:
+      column: submitterId
+      table:
+        name: submissions
+        schema: public

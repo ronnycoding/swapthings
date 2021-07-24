@@ -1,0 +1,13 @@
+table:
+  name: articles
+  schema: public
+object_relationships:
+- name: article_sub_category
+  using:
+    foreign_key_constraint_on: articleSubCategoryId
+- name: currency
+  using:
+    foreign_key_constraint_on: priceCurrency
+- name: user
+  using:
+    foreign_key_constraint_on: publisherId

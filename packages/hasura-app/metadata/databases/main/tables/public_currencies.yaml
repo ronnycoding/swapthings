@@ -1,0 +1,19 @@
+table:
+  name: currencies
+  schema: public
+is_enum: true
+array_relationships:
+- name: article_bids
+  using:
+    foreign_key_constraint_on:
+      column: moneyCurrency
+      table:
+        name: article_bids
+        schema: public
+- name: articles
+  using:
+    foreign_key_constraint_on:
+      column: priceCurrency
+      table:
+        name: articles
+        schema: public

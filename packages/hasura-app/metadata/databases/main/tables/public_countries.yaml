@@ -1,0 +1,12 @@
+table:
+  name: countries
+  schema: public
+is_enum: true
+array_relationships:
+- name: provinces
+  using:
+    foreign_key_constraint_on:
+      column: countryId
+      table:
+        name: provinces
+        schema: public

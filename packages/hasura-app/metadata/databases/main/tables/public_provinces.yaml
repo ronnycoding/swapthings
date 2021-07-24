@@ -1,0 +1,18 @@
+table:
+  name: provinces
+  schema: public
+object_relationships:
+- name: country
+  using:
+    foreign_key_constraint_on: countryId
+- name: language
+  using:
+    foreign_key_constraint_on: languageISO
+array_relationships:
+- name: towns
+  using:
+    foreign_key_constraint_on:
+      column: provinceISO
+      table:
+        name: towns
+        schema: public

@@ -1,0 +1,10 @@
+table:
+  name: article_bids
+  schema: public
+object_relationships:
+- name: bid_status
+  using:
+    foreign_key_constraint_on: articleBidStatusId
+- name: currency
+  using:
+    foreign_key_constraint_on: moneyCurrency
