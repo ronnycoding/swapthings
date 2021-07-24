@@ -3295,7 +3295,7 @@ cloudinary-core@^2.10.2:
   resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.11.4.tgz#1d191935bcdcd412d499a91b928a94b266fee49d"
   integrity sha512-F1BZczD6f5mB73D0c8gl/iuacVQQO+UhckNZxeeS9ZIVeIHbsfqwWiAZMQmIvEb7Wti/9MLU0xVwaWOak2THHA==
 
-cloudinary@^1.11.0:
+cloudinary@^1.25.1:
   version "1.26.2"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.26.2.tgz#0a5dcec89e3e6b483ea5ed8433b8b5542d578957"
   integrity sha512-C42qx+Be+pOIbZSZ9+qYTzKpddYkXqdFioD0mf+Tp7K6Lb61rUjROAqJhsz+RP/ZOnGBHTAkhujcooAyZkx0Kw==
@@ -4879,7 +4879,7 @@ friendly-errors-webpack-plugin@^1.7.0:
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-from2@^2.1.0, from2@^2.1.1:
+from2@^2.1.0, from2@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/from2/-/from2-2.3.0.tgz#8bfb5502bde4a4d36cfdeea007fcca21d7e382af"
   integrity sha1-i/tVAr3kpNNs/e6gB/zKIdfjgq8=
@@ -5778,13 +5778,13 @@ intl-messageformat@^8.3.7:
     intl-format-cache "^4.2.43"
     intl-messageformat-parser "^5.2.1"
 
-into-stream@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/into-stream/-/into-stream-3.1.0.tgz#96fb0a936c12babd6ff1752a17d05616abd094c6"
-  integrity sha1-lvsKk2wSur1v8XUqF9BWFqvQlMY=
+into-stream@^5.1.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/into-stream/-/into-stream-5.1.1.tgz#f9a20a348a11f3c13face22763f2d02e127f4db8"
+  integrity sha512-krrAJ7McQxGGmvaYbB7Q1mcA+cRwg9Ij2RfWIeVesNBgVDZmzY/Fa4IpZUT3bmdRzMzdf/mzltCG2Dq99IZGBA==
   dependencies:
-    from2 "^2.1.1"
-    p-is-promise "^1.1.0"
+    from2 "^2.3.0"
+    p-is-promise "^3.0.0"
 
 invariant@^2.2.1, invariant@^2.2.4:
   version "2.2.4"
@@ -7786,10 +7786,10 @@ p-finally@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
   integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
 
-p-is-promise@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-1.1.0.tgz#9c9456989e9f6588017b0434d56097675c3da05e"
-  integrity sha1-nJRWmJ6fZYgBewQ01WCXZ1w9oF4=
+p-is-promise@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-3.0.0.tgz#58e78c7dfe2e163cf2a04ff869e7c1dba64a5971"
+  integrity sha512-Wo8VsW4IRQSKVXsJCn7TomUaVtyfjVDn3nUP7kE967BQk0CwFpdbZs0X0uk5sW9mkBa9eNM7hCMaG93WUAwxYQ==
 
 p-limit@^2.0.0, p-limit@^2.2.0:
   version "2.3.0"
@@ -10353,18 +10353,18 @@ strapi-provider-email-sendmail@3.6.5:
     sendmail "^1.6.1"
     strapi-utils "3.6.5"
 
+strapi-provider-upload-cloudinary@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/strapi-provider-upload-cloudinary/-/strapi-provider-upload-cloudinary-3.6.5.tgz#117bd7f6fb03d9cac72443a80dd0de25576dda28"
+  integrity sha512-gOSRp2iv2OeEMexrqxrE8tRSgD7ObRje5+gVW85x/nTg4oYdbffajSn5rmEf/+Y/8smwwR4xTHWzy+AFt4R4rg==
+  dependencies:
+    cloudinary "^1.25.1"
+    into-stream "^5.1.0"
+
 strapi-provider-upload-local@3.6.5:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.6.5.tgz#0be16515c9c5eeca05211bd9f4b2a93449ccfbe3"
   integrity sha512-VrOtn+ww9VFJFaFBBFzpuOqN2/zYjIG36SD6zA0KaVJVyot/RNdiHiFTpm/W1a34Z/t3ok3/pt35OlEf55XM8Q==
-
-strapi-upload-cloudinary@^3.0.0-alpha.12:
-  version "3.0.0-alpha.12"
-  resolved "https://registry.yarnpkg.com/strapi-upload-cloudinary/-/strapi-upload-cloudinary-3.0.0-alpha.12.tgz#2b8e8ea7af0a5e5461d8e9e9be936ef00ed0daa4"
-  integrity sha512-vvvGzfNEZS8sKmGTNVQfsvv7qKCsOOfpjRTTDo0Gewi3gJzP6vLdRieotgnQhJjFA2kmiBU72mpLrXgb1NpT4Q==
-  dependencies:
-    cloudinary "^1.11.0"
-    into-stream "^3.1.0"
 
 strapi-utils@3.6.5:
   version "3.6.5"
