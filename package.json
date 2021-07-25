@@ -34,6 +34,7 @@
     "redis:docker-stop": "yarn workspace redis-app docker-stop",
     "redis:docker-down": "yarn workspace redis-app docker-down",
     "redis:docker-restart": "yarn workspace redis-app docker-restart",
+    "redis:cli": "yarn workspace redis-app cli",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "diff": "lerna diff",
     "web:storybook": "yarn workspace web-app storybook",
