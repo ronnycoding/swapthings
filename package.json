@@ -17,6 +17,7 @@
     "native:android": "yarn workspace mobile-app android",
     "native:ios": "yarn workspace mobile-app ios",
     "web:dev": "yarn workspace web-app dev",
+    "web:cli": "yarn workspace web-app cli",
     "cms:dev": "yarn workspace cms-app dev",
     "cms:build": "yarn workspace cms-app build",
     "cms:cli": "yarn workspace cms-app strapi",

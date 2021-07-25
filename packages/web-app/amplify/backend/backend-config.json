@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "swapthings69bc3b81": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
