@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Make sure we get or refresh the temporary credentials
+export AWS_PROFILE=awsbot

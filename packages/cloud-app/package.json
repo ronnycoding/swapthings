@@ -2,7 +2,6 @@
   "name": "cloud-app",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "bin": {
     "cloud-app": "bin/cloud-app.js"
   },
@@ -11,38 +10,21 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "lint": "eslint --ignore-path .gitignore .",
-    "check-format": "prettier --ignore-path .gitignore --write \"**/*.+(json|ts)\" --list-different",
-    "check-types": "tsc"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ]
+    "cli": "npm run cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.111.0",
-    "@blockmatic/eslint-config": "2.0.0",
-    "@blockmatic/prettier-config": "2.0.0",
-    "@types/jest": "^26.0.23",
+    "@aws-cdk/assert": "1.115.0",
+    "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "@typescript-eslint/eslint-plugin": "4.28.1",
-    "@typescript-eslint/parser": "4.28.1",
-    "aws-cdk": "1.111.0",
-    "eslint": "7.30.0",
-    "eslint-config-prettier": "8.3.0",
-    "jest": "^26.6.3",
-    "prettier": "2.2.1",
-    "ts-jest": "26.2.0",
-    "ts-node": "9.0.0",
+    "aws-cdk": "1.115.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-sns": "1.111.0",
-    "@aws-cdk/aws-sns-subscriptions": "1.111.0",
-    "@aws-cdk/aws-sqs": "1.111.0",
-    "@aws-cdk/core": "1.111.0",
-    "@types/jest": "^26.0.23"
+    "@aws-cdk/aws-cognito": "^1.115.0",
+    "@aws-cdk/core": "1.115.0",
+    "source-map-support": "^0.5.16"
   }
 }
