@@ -1,8 +1,8 @@
 {
   "name": "redis-app",
   "version": "0.1.0",
-  "license": "MIT",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "docker-up": "docker-compose up -d",
     "docker-stop": "docker-compose stop",
